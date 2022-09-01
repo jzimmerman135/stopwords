@@ -1,0 +1,129 @@
+#nav {
+    font-family: 'Silkscreen', cursive;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    background: linear-gradient(0deg, rgba(31,16,51,1) 24px, rgb(33, 8, 83) 100%);
+    color: rgb(230, 240, 250);
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+}
+
+#nav a {
+    /* color: inherit; */
+    text-decoration: none;
+}
+
+#nav > a, #nav > a:visited {
+    color: rgb(251, 129, 110);
+    font-size: 30px;
+    text-shadow: 0px 0px 15px rgb(255, 94, 73);
+    transition: .3s;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    user-select: none;
+
+    margin-left: 100px;
+    margin-right: auto;
+}
+
+#nav > a:hover {
+    transform: translateY(-4px);
+    color: rgb(253, 204, 171);
+    text-shadow:  0px 0px 10px rgb(255, 94, 73), 2px 9px 15px rgb(255, 94, 73);
+}
+
+#nav > ul {
+    margin: 0;
+    margin-right: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    overflow: none;
+    color: rgb(242, 134, 120);
+}
+
+#nav > ul a, #nav > ul a:visited {
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: .4s;
+    color: inherit;
+    text-decoration: none;
+    padding-right: 50px;
+}
+
+#nav > ul a:hover {
+    text-underline-offset: 4px;
+    text-decoration: underline;
+}
+
+#nav .mobile-show {
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    #nav > ul a {
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #nav {
+        justify-content: space-between;
+    }
+    
+    #nav .chaff {
+        display: none;
+    }
+
+    #nav > a {
+        font-size: 20px;
+        width: 30px;
+        margin-left: 50px;
+        margin-right: auto;
+    }
+
+    #nav > ul {
+        margin-right: 30px;
+    }
+
+    #nav > ul a {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #nav {
+        margin-bottom: 5px;
+    }
+    
+    #nav .mobile-hide {
+        display: none;
+    }
+
+    #nav .mobile-show {
+        display: inherit;
+    }
+
+    #nav > ul a {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    #nav > a {
+        margin-left: 5px;
+    }
+
+    #nav > ul {
+        margin-right: 0px;
+    }
+}
